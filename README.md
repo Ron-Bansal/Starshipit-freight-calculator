@@ -12,5 +12,5 @@ https://freight-calculator.netlify.app/
 
 
 
-Zones based on [Australia Post's domestic shipping postcode ranges]([url](https://auspost.com.au/content/dam/auspost_corp/media/documents/post-guides/parcel-post-guide-ms102-other-nsw-n2.pdf)https://auspost.com.au/content/dam/auspost_corp/media/documents/post-guides/parcel-post-guide-ms102-other-nsw-n2.pdf)
+Zones based on [Australia Post's domestic shipping postcode ranges]([url](https://auspost.com.au/content/dam/auspost_corp/media/documents/post-guides/parcel-post-guide-ms102-other-ns-n2.pdf)https://auspost.com.au/content/dam/auspost_corp/media/documents/post-guides/parcel-post-guide-ms102-other-nsw-n2.pdf)
 Note: These rates are only an indication. Actual rates may vary.
