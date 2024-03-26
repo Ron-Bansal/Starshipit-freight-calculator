@@ -67,15 +67,15 @@ const zones = [
     post_code: "2000",
     country_code: "AU",
   },
-    {
-      zone_name: "other-nsw",
-      street: "123 Tweed Coast Road",
-      suburb: "Cudgen",
-      city: "Cudgen",
-      state: "NSW",
-      post_code: "2487",
-      country_code: "AU",
-    },
+  {
+    zone_name: "other-nsw",
+    street: "123 Tweed Coast Road",
+    suburb: "Cudgen",
+    city: "Cudgen",
+    state: "NSW",
+    post_code: "2487",
+    country_code: "AU",
+  },
   {
     zone_name: "melbourne",
     street: "123 Collins St",
@@ -85,15 +85,15 @@ const zones = [
     post_code: "3000",
     country_code: "AU",
   },
-    {
-      zone_name: "other-vic",
-      street: "11 Hosking Road",
-      suburb: "Jeetho",
-      city: "Jeetho",
-      state: "VIC",
-      post_code: "3945",
-      country_code: "AU",
-    },
+  {
+    zone_name: "other-vic",
+    street: "11 Hosking Road",
+    suburb: "Jeetho",
+    city: "Jeetho",
+    state: "VIC",
+    post_code: "3945",
+    country_code: "AU",
+  },
   {
     zone_name: "brisbane",
     street: "123 Albion Avenue",
@@ -103,34 +103,33 @@ const zones = [
     post_code: "4220",
     country_code: "AU",
   },
-    {
-      zone_name: "near-qld",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    },
-    {
-      zone_name: "mid-qld",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    },
-    {
-      zone_name: "nth-qld",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    }
-    ,
+  {
+    zone_name: "near-qld",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
+  {
+    zone_name: "mid-qld",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
+  {
+    zone_name: "nth-qld",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
   {
     zone_name: "perth",
     street: "123 Queen St",
@@ -140,24 +139,24 @@ const zones = [
     post_code: "6000",
     country_code: "AU",
   },
-    {
-      zone_name: "mid-wa",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    },
-    {
-      zone_name: "nth-wa",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    },
+  {
+    zone_name: "mid-wa",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
+  {
+    zone_name: "nth-wa",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
   {
     zone_name: "adelaide",
     street: "123 Queen St",
@@ -167,33 +166,33 @@ const zones = [
     post_code: "5000",
     country_code: "AU",
   },
-    {
-      zone_name: "other-sa",
-      street: "123 Collins St",
-      suburb: "Melbourne",
-      city: "Melbourne",
-      state: "VIC",
-      post_code: "3000",
-      country_code: "AU",
-    },
-    {
-      zone_name: "northern-territory",
-      street: "1 Queen St",
-      suburb: "Stuart Park",
-      city: "Stuart Park",
-      state: "NT",
-      post_code: "0820",
-      country_code: "AU",
-    },
-    {
-      zone_name: "tasmania",
-      street: "12 Hobart Rd",
-      suburb: "South Launceston",
-      city: "South Launceston",
-      state: "TAS",
-      post_code: "7249",
-      country_code: "AU",
-    },
+  {
+    zone_name: "other-sa",
+    street: "123 Collins St",
+    suburb: "Melbourne",
+    city: "Melbourne",
+    state: "VIC",
+    post_code: "3000",
+    country_code: "AU",
+  },
+  {
+    zone_name: "northern-territory",
+    street: "1 Queen St",
+    suburb: "Stuart Park",
+    city: "Stuart Park",
+    state: "NT",
+    post_code: "0820",
+    country_code: "AU",
+  },
+  {
+    zone_name: "tasmania",
+    street: "12 Hobart Rd",
+    suburb: "South Launceston",
+    city: "South Launceston",
+    state: "TAS",
+    post_code: "7249",
+    country_code: "AU",
+  },
 ];
 
 // function calculateShippingRate() {
@@ -276,7 +275,6 @@ const zones = [
 // setTimeout(() => calculateShippingRate("other-sa"), 12000); // Delayed request for Other NSW
 // setTimeout(() => calculateShippingRate("northern-territory"), 14000); // Delayed request for Sydney
 // setTimeout(() => calculateShippingRate("tasmania"), 15000); // Delayed request for Other NSW
-
 
 // function calculateShippingRate() {
 //   console.log("Calculating shipping rate...");
@@ -572,6 +570,14 @@ let subscriptionKey = "";
 function showApiKeyModal() {
   const modal = document.getElementById("api-key-modal");
   modal.style.display = "block";
+
+  const storedApiKey = localStorage.getItem("apiKey");
+  const storedSubscriptionKey = localStorage.getItem("subscriptionKey");
+
+  if (storedApiKey && storedSubscriptionKey) {
+    document.getElementById("api-key").value = apiKey;
+    document.getElementById("subscription-key").value = subscriptionKey;
+  }
 }
 
 // Function to close the API key modal
@@ -615,7 +621,6 @@ function calculateShippingRate() {
   // Replace the hardcoded API and Subscription keys with the variables apiKey and subscriptionKey
 }
 
-
 function calculateShippingRate() {
   console.log("Calculating shipping rate...");
 
@@ -644,8 +649,12 @@ function calculateShippingRate() {
     currency: "AUD",
   };
 
-  console.log("...from sender address", formData.sender, "with the package", formData.packages);
-
+  console.log(
+    "...from sender address",
+    formData.sender,
+    "with the package",
+    formData.packages
+  );
 
   const delay = 500; // Delay in milliseconds between requests
   const maxRetries = 3; // Maximum number of retries for failed requests
@@ -684,7 +693,12 @@ function calculateShippingRate() {
             (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
           )
           .join("<br>");
-        console.log(`Rates for ${destinationAddresses[index].zone_name || "Custom Address"}:`, rates);
+        console.log(
+          `Rates for ${
+            destinationAddresses[index].zone_name || "Custom Address"
+          }:`,
+          rates
+        );
         document.getElementById(
           `result-${destinationAddresses[index].zone_name || "custom-address"}`
         ).innerHTML = rates;
@@ -716,10 +730,14 @@ function calculateShippingRate() {
                 if (data.success) {
                   const rates = data.rates
                     .map(
-                      (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
+                      (rate) =>
+                        `${rate.service_name}: $${rate.total_price.toFixed(2)}`
                     )
                     .join("<br>");
-                  console.log(`Rates for ${destination.zone_name || "Custom Address"}:`, rates);
+                  console.log(
+                    `Rates for ${destination.zone_name || "Custom Address"}:`,
+                    rates
+                  );
                   document.getElementById(
                     `result-${destination.zone_name || "custom-address"}`
                   ).innerHTML = rates;
@@ -727,7 +745,9 @@ function calculateShippingRate() {
                 } else {
                   if (retryCount < maxRetries) {
                     console.log(
-                      `Failed to get rates for ${destination.zone_name || "Custom Address"}. Retrying...`
+                      `Failed to get rates for ${
+                        destination.zone_name || "Custom Address"
+                      }. Retrying...`
                     );
                     fetchWithRetry(retryCount + 1)
                       .then(resolve)
@@ -744,7 +764,9 @@ function calculateShippingRate() {
                 console.error("Error:", error);
                 if (retryCount < maxRetries) {
                   console.log(
-                    `An error occurred for ${destination.zone_name || "Custom Address"}. Retrying...`
+                    `An error occurred for ${
+                      destination.zone_name || "Custom Address"
+                    }. Retrying...`
                   );
                   fetchWithRetry(retryCount + 1)
                     .then(resolve)
@@ -827,5 +849,3 @@ if (savedAddressesFromStorage) {
 
 // Display saved addresses on page load
 displaySavedAddresses();
-
-
