@@ -182,8 +182,6 @@ input {
   cursor: pointer;
 }
 
-
-
 #saved-addresses-list > li:hover {
   box-shadow: 0px 1px 3px rgba(3, 7, 18, 0.08),
     0px 4px 11px rgba(3, 7, 18, 0.05), 0px 10px 24px rgba(3, 7, 18, 0.03);
@@ -217,6 +215,10 @@ input {
   box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.08), 0px 5px 4px rgba(3, 7, 18, 0.06),
     0px 12px 9px rgba(3, 7, 18, 0.05), 0px 20px 15px rgba(3, 7, 18, 0.03),
     0px 32px 24px rgba(3, 7, 18, 0.02);
+}
+
+#fetch-message {
+  margin-top: 0.8rem;
 }
 
 .modal {

@@ -154,7 +154,12 @@
       </div>
 
       <div class="btns-wrapper">
-        <button id="api-key-btn" class="key-cta" type="button" onclick="showApiKeyModal()">
+        <button
+          id="api-key-btn"
+          class="key-cta"
+          type="button"
+          onclick="showApiKeyModal()"
+        >
           <p>
             <span class="material-symbols-outlined"> key </span>
             <!-- Enter your Starshipit API Key  -->
@@ -165,6 +170,7 @@
           Calculate Shipping Rate
         </button>
       </div>
+      <div id="fetch-message"></div>
     </form>
 
     <div id="api-key-modal" class="modal">
@@ -177,7 +183,11 @@
         </div>
         <div class="input-field">
           <label for="subscription-key">Subscription Key*</label>
-          <input type="text" id="subscription-key" placeholder="Enter your Subscription Key" />
+          <input
+            type="text"
+            id="subscription-key"
+            placeholder="Enter your Subscription Key"
+          />
         </div>
         <button class="save-modal-btn" onclick="saveApiKeys()">Save</button>
       </div>

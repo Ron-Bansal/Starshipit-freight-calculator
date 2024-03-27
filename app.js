@@ -1,62 +1,3 @@
-// function calculateShippingRate() {
-//   console.log("Calculating shipping rate...");
-//   const formData = {
-//     sender: {
-//       street: document.getElementById("street").value,
-//       suburb: document.getElementById("suburb").value,
-//       city: document.getElementById("suburb").value,
-//       state: document.getElementById("state").value,
-//       post_code: document.getElementById("post_code").value,
-//       country_code: document.getElementById("country_code").value,
-//     },
-//     destination: {
-//       street: "20 George Street",
-//       suburb: "Sydney",
-//       city: "Sydney",
-//       state: "NSW",
-//       post_code: "2000",
-//       country_code: "AU",
-//     },
-//     packages: [
-//       {
-//         weight: parseFloat(document.getElementById("weight").value),
-//         height: parseFloat(document.getElementById("height").value/10),
-//         width: parseFloat(document.getElementById("width").value/10),
-//         length: parseFloat(document.getElementById("length").value/10),
-//       },
-//     ],
-//     currency: "AUD",
-//   };
-
-//   fetch("https://api.starshipit.com/api/rates", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "StarShipIT-Api-Key": "5d6c3e1fa6514cc79677de811ef30b9f",
-//       "Ocp-Apim-Subscription-Key": "b686fcc9b8b546d0be824f91840148a9",
-//     },
-//     body: JSON.stringify(formData),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data.success) {
-//         const rates = data.rates
-//           .map(
-//             (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//           )
-//           .join("<br>");
-//         console.log(rates);
-//         document.getElementById("result").innerHTML = rates;
-//       } else {
-//         document.getElementById("result").innerHTML = "Failed to get rates";
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//       document.getElementById("result").innerHTML = "An error occurred";
-//     });
-// }
-
 const zones = [
   {
     zone_name: "sydney",
@@ -195,371 +136,6 @@ const zones = [
   },
 ];
 
-// function calculateShippingRate() {
-//   console.log("Calculating shipping rate...");
-
-//   const formData = {
-//     sender: {
-//       street: document.getElementById("street").value,
-//       suburb: document.getElementById("suburb").value,
-//       city: document.getElementById("suburb").value,
-//       state: document.getElementById("state").value,
-//       post_code: document.getElementById("post_code").value,
-//       country_code: document.getElementById("country_code").value,
-//     },
-//     packages: [
-//       {
-//         weight: parseFloat(document.getElementById("weight").value),
-//         height: parseFloat(document.getElementById("height").value / 10),
-//         width: parseFloat(document.getElementById("width").value / 10),
-//         length: parseFloat(document.getElementById("length").value / 10),
-//       },
-//     ],
-//     currency: "AUD",
-//   };
-
-//   const promises = zones.map((zone) => {
-//     const requestData = { ...formData, destination: zone };
-//     return fetch("https://api.starshipit.com/api/rates", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         "StarShipIT-Api-Key": "3b6ace8adb3f48e592a6026068a67d8d",
-//         "Ocp-Apim-Subscription-Key": "b686fcc9b8b546d0be824f91840148a9",
-//       },
-//       body: JSON.stringify(requestData),
-//     });
-//   });
-
-//   Promise.all(promises)
-//     .then((responses) =>
-//       Promise.all(responses.map((response) => response.json()))
-//     )
-//     .then((results) => {
-//       results.forEach((data, index) => {
-//         if (data.success) {
-//           const rates = data.rates
-//             .map(
-//               (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//             )
-//             .join("<br>");
-//           console.log(`Rates for ${zones[index].zone_name}:`, rates);
-//           document.getElementById(
-//             `result-${zones[index].zone_name}`
-//           ).innerHTML = rates;
-//         } else {
-//           document.getElementById(
-//             `result-${zones[index].zone_name}`
-//           ).innerHTML = "Failed to get rates";
-//         }
-//       });
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//       document.getElementById("result").innerHTML = "An error occurred";
-//     });
-// }
-
-// setTimeout(() => calculateShippingRate("sydney"), 1000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("other-nsw"), 2000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("melbourne"), 3000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("other-vic"), 4000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("brisbane"), 5000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("near-qld"), 6000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("mid-qld"), 7000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("nth-qld"), 8000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("perth"), 9000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("mid-wa"), 10000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("nth-wa"), 11000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("adelaide"), 12000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("other-sa"), 12000); // Delayed request for Other NSW
-// setTimeout(() => calculateShippingRate("northern-territory"), 14000); // Delayed request for Sydney
-// setTimeout(() => calculateShippingRate("tasmania"), 15000); // Delayed request for Other NSW
-
-// function calculateShippingRate() {
-//   console.log("Calculating shipping rate...");
-
-//   const formData = {
-//     sender: {
-//       street: document.getElementById("street").value,
-//       suburb: document.getElementById("suburb").value,
-//       city: document.getElementById("suburb").value,
-//       state: document.getElementById("state").value,
-//       post_code: document.getElementById("post_code").value,
-//       country_code: document.getElementById("country_code").value,
-//     },
-//     packages: [
-//       {
-//         weight: parseFloat(document.getElementById("weight").value),
-//         height: parseFloat(document.getElementById("height").value / 10),
-//         width: parseFloat(document.getElementById("width").value / 10),
-//         length: parseFloat(document.getElementById("length").value / 10),
-//       },
-//     ],
-//     currency: "AUD",
-//   };
-
-//   const delay = 500; // Delay in milliseconds between requests
-//   let delayCounter = 0;
-
-//   zones.forEach((zone, index) => {
-//     const requestData = { ...formData, destination: zone };
-//     setTimeout(() => {
-//       fetch("https://api.starshipit.com/api/rates", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//           "StarShipIT-Api-Key": "3b6ace8adb3f48e592a6026068a67d8d",
-//           "Ocp-Apim-Subscription-Key": "b686fcc9b8b546d0be824f91840148a9",
-//         },
-//         body: JSON.stringify(requestData),
-//       })
-//         .then((response) => response.json())
-//         .then((data) => {
-//           if (data.success) {
-//             const rates = data.rates
-//               .map(
-//                 (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//               )
-//               .join("<br>");
-//             console.log(`Rates for ${zones[index].zone_name}:`, rates);
-//             document.getElementById(
-//               `result-${zones[index].zone_name}`
-//             ).innerHTML = rates;
-//           } else {
-//             document.getElementById(
-//               `result-${zones[index].zone_name}`
-//             ).innerHTML = "Failed to get rates";
-//           }
-//         })
-//         .catch((error) => {
-//           console.error("Error:", error);
-//           document.getElementById(`result-${zones[index].zone_name}`).innerHTML =
-//             "An error occurred";
-//         });
-//     }, delayCounter * delay);
-//     delayCounter++;
-//   });
-// }
-
-// function calculateShippingRate() {
-//   console.log("Calculating shipping rate...");
-
-//   const formData = {
-//     sender: {
-//       street: document.getElementById("street").value,
-//       suburb: document.getElementById("suburb").value,
-//       city: document.getElementById("suburb").value,
-//       state: document.getElementById("state").value,
-//       post_code: document.getElementById("post_code").value,
-//       country_code: document.getElementById("country_code").value,
-//     },
-//     packages: [
-//       {
-//         weight: parseFloat(document.getElementById("weight").value),
-//         height: parseFloat(document.getElementById("height").value / 10),
-//         width: parseFloat(document.getElementById("width").value / 10),
-//         length: parseFloat(document.getElementById("length").value / 10),
-//       },
-//     ],
-//     currency: "AUD",
-//   };
-
-//   const delay = 700; // Delay in milliseconds between requests
-//   const maxRetries = 2; // Maximum number of retries for failed requests
-//   let delayCounter = 0;
-
-//   zones.forEach((zone, index) => {
-//     const requestData = { ...formData, destination: zone };
-//     const fetchWithRetry = (retryCount = 0) => {
-//       setTimeout(() => {
-//         fetch("https://api.starshipit.com/api/rates", {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//             "StarShipIT-Api-Key": "3b6ace8adb3f48e592a6026068a67d8d",
-//             "Ocp-Apim-Subscription-Key": "b686fcc9b8b546d0be824f91840148a9",
-//           },
-//           body: JSON.stringify(requestData),
-//         })
-//           .then((response) => response.json())
-//           .then((data) => {
-//             if (data.success) {
-//               const rates = data.rates
-//                 .map(
-//                   (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//                 )
-//                 .join("<br>");
-//               console.log(`Rates for ${zones[index].zone_name}:`, rates);
-//               document.getElementById(
-//                 `result-${zones[index].zone_name}`
-//               ).innerHTML = rates;
-//             } else {
-//               if (retryCount < maxRetries) {
-//                 console.log(
-//                   `Failed to get rates for ${zones[index].zone_name}. Retrying...`
-//                 );
-//                 fetchWithRetry(retryCount + 1);
-//               } else {
-//                 document.getElementById(
-//                   `result-${zones[index].zone_name}`
-//                 ).innerHTML = "Failed to get rates after multiple retries";
-//               }
-//             }
-//           })
-//           .catch((error) => {
-//             console.error("Error:", error);
-//             if (retryCount < maxRetries) {
-//               console.log(
-//                 `An error occurred for ${zones[index].zone_name}. Retrying...`
-//               );
-//               fetchWithRetry(retryCount + 1);
-//             } else {
-//               document.getElementById(
-//                 `result-${zones[index].zone_name}`
-//               ).innerHTML = "An error occurred after multiple retries";
-//             }
-//           });
-//       }, delayCounter * delay);
-//       delayCounter++;
-//     };
-
-//     fetchWithRetry();
-//   });
-// }
-
-// function calculateShippingRate() {
-//   console.log("Calculating shipping rate...");
-
-//   const formData = {
-//     sender: {
-//       street: document.getElementById("street").value,
-//       suburb: document.getElementById("suburb").value,
-//       city: document.getElementById("suburb").value,
-//       state: document.getElementById("state").value,
-//       post_code: document.getElementById("post_code").value,
-//       // country_code: document.getElementById("country_code").value,
-//       country_code: "AU",
-//     },
-//     packages: [
-//       {
-//         weight: parseFloat(document.getElementById("weight").value),
-//         height: parseFloat(document.getElementById("height").value / 10),
-//         width: parseFloat(document.getElementById("width").value / 10),
-//         length: parseFloat(document.getElementById("length").value / 10),
-//       },
-//     ],
-//     currency: "AUD",
-//   };
-
-//   const delay = 500; // Delay in milliseconds between requests
-//   const maxRetries = 3; // Maximum number of retries for failed requests
-//   let delayCounter = 0;
-
-//   const cacheKey = JSON.stringify(formData); // Create a cache key based on the form data
-//   const cachedData = localStorage.getItem(cacheKey); // Check if data is cached
-
-//   if (cachedData) {
-//     // If data is cached, use the cached data
-//     const cachedResults = JSON.parse(cachedData);
-//     cachedResults.forEach((data, index) => {
-//       if (data.success) {
-//         const rates = data.rates
-//           .map(
-//             (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//           )
-//           .join("<br>");
-//         console.log(`Rates for ${zones[index].zone_name}:`, rates);
-//         document.getElementById(
-//           `result-${zones[index].zone_name}`
-//         ).innerHTML = rates;
-//       } else {
-//         document.getElementById(
-//           `result-${zones[index].zone_name}`
-//         ).innerHTML = "Failed to get rates";
-//       }
-//     });
-//   } else {
-//     // If data is not cached, fetch from the API and cache the results
-//     const promises = zones.map((zone, index) => {
-//       const requestData = { ...formData, destination: zone };
-
-//       const fetchWithRetry = (retryCount = 0) => {
-//         return new Promise((resolve, reject) => {
-//           setTimeout(() => {
-//             fetch("https://api.starshipit.com/api/rates", {
-//               method: "POST",
-//               headers: {
-//                 "Content-Type": "application/json",
-//                 "StarShipIT-Api-Key": "3b6ace8adb3f48e592a6026068a67d8d",
-//                 "Ocp-Apim-Subscription-Key": "b686fcc9b8b546d0be824f91840148a9",
-//               },
-//               body: JSON.stringify(requestData),
-//             })
-//               .then((response) => response.json())
-//               .then((data) => {
-//                 if (data.success) {
-//                   const rates = data.rates
-//                     .map(
-//                       (rate) => `${rate.service_name}: $${rate.total_price.toFixed(2)}`
-//                     )
-//                     .join("<br>");
-//                   console.log(`Rates for ${zones[index].zone_name}:`, rates);
-//                   document.getElementById(
-//                     `result-${zones[index].zone_name}`
-//                   ).innerHTML = rates;
-//                   resolve(data);
-//                 } else {
-//                   if (retryCount < maxRetries) {
-//                     console.log(
-//                       `Failed to get rates for ${zones[index].zone_name}. Retrying...`
-//                     );
-//                     fetchWithRetry(retryCount + 1)
-//                       .then(resolve)
-//                       .catch(reject);
-//                   } else {
-//                     document.getElementById(
-//                       `result-${zones[index].zone_name}`
-//                     ).innerHTML = "Failed to get rates after multiple retries";
-//                     resolve(null);
-//                   }
-//                 }
-//               })
-//               .catch((error) => {
-//                 console.error("Error:", error);
-//                 if (retryCount < maxRetries) {
-//                   console.log(
-//                     `An error occurred for ${zones[index].zone_name}. Retrying...`
-//                   );
-//                   fetchWithRetry(retryCount + 1)
-//                     .then(resolve)
-//                     .catch(reject);
-//                 } else {
-//                   document.getElementById(
-//                     `result-${zones[index].zone_name}`
-//                   ).innerHTML = "An error occurred after multiple retries";
-//                   resolve(null);
-//                 }
-//               });
-//           }, delayCounter * delay);
-//           delayCounter++;
-//         });
-//       };
-
-//       return fetchWithRetry();
-//     });
-
-//     Promise.all(promises)
-//       .then((results) => {
-//         localStorage.setItem(cacheKey, JSON.stringify(results));
-//       })
-//       .catch((error) => {
-//         console.error("Error caching data:", error);
-//       });
-//   }
-// }
-
-// Constants and variables
 let apiKey = "";
 let subscriptionKey = "";
 
@@ -616,13 +192,11 @@ function calculateShippingRate() {
     showApiKeyModal();
     return;
   }
-
-  // Existing calculateShippingRate function logic
-  // Replace the hardcoded API and Subscription keys with the variables apiKey and subscriptionKey
 }
 
 function calculateShippingRate() {
   console.log("Calculating shipping rate...");
+  document.getElementById("fetch-message").textContent = "Fetching results...";
 
   if (!apiKey || !subscriptionKey) {
     showApiKeyModal();
@@ -708,6 +282,9 @@ function calculateShippingRate() {
         ).innerHTML = "Failed to get rates";
       }
     });
+
+    // Show the "Completed" message
+    document.getElementById("fetch-message").textContent = "Completed";
   } else {
     // If data is not cached, fetch from the API and cache the results
     const promises = destinationAddresses.map((destination, index) => {
@@ -789,14 +366,19 @@ function calculateShippingRate() {
     Promise.all(promises)
       .then((results) => {
         localStorage.setItem(cacheKey, JSON.stringify(results));
+
+        // Show the "Completed" message
+        document.getElementById("fetch-message").textContent = "Completed";
       })
       .catch((error) => {
         console.error("Error caching data:", error);
+
+        // Show the "Completed" message even if there's an error
+        document.getElementById("fetch-message").textContent = "Request Complete - Error caching data";
       });
   }
 }
 
-// Constants and variables
 const MAX_SAVED_ADDRESSES = 5;
 let savedAddresses = [];
 
